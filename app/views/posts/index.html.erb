@@ -1,0 +1,9 @@
+<h1>Index</h1>
+
+<h3><%= link_to 'New post', new_post_path%></h2>
+
+
+
+<% @posts.each do |post| %>
+    <%= link_to post.title, post%></br>
+<% end %>
