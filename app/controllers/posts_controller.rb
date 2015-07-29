@@ -10,6 +10,8 @@ class PostsController < ApplicationController
     
     def new
         @post = current_user.posts.build
+        
+        @sub = Sub.find(params[:sub_id])
     
     end
     
@@ -56,7 +58,7 @@ class PostsController < ApplicationController
     
     def post_params
     
-        params.require(:post).permit(:title)
+        params.require(:post).permit(:title,:sub_id)
     end
     
 

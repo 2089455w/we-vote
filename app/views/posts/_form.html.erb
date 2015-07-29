@@ -16,6 +16,7 @@
     
     <div class="form-group">
         <%= f.input :title, input_html: { class: 'form-group' } %>
+        <%= f.hidden_field :sub_id, :value => @sub.id %>
     </div>
     
     <%= f.button :submit, class: 'btn btn-primary'%>
