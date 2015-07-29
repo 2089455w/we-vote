@@ -9,6 +9,8 @@
 <h3><%= link_to 'New post', new_post_path(:sub_id => 1) %></h2>
 
 
+<button type="button" id="test">Subscribe</button>
+
 <div>
   <% @sub.posts.each do |p|%>
     <%= p.title %>
@@ -22,3 +24,6 @@
 
 <%= link_to 'Edit', edit_sub_path(@sub) %> |
 <%= link_to 'Back', subs_path %>
+
+
+
