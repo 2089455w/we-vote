@@ -16,6 +16,7 @@ class PostsController < ApplicationController
     end
     
     
+    
     def create
         @post = current_user.posts.build(post_params)
     
@@ -42,6 +43,28 @@ class PostsController < ApplicationController
             render 'edit'
         end
     end
+    
+    
+    
+    def upvote
+        @post = Post.find(params[:id])
+        @post.upvote_by current_user
+        redirect_to @post
+    end
+    
+    def downvote
+        @post = Post.find(params[:id])
+        @post.downvote_by current_user
+        redirect_to @post
+    end
+    
+    
+    def unvote
+        @post = Post.find(params[:id])
+        @post.unvote_by current_user
+        redirect_to @post
+    end
+    
     
   
     

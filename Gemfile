@@ -32,6 +32,9 @@ gem 'bootstrap-sass', '~> 3.3.5.1'
 #Devise used for user auth
 gem 'devise', '~> 3.5.1'
 
+#Useing act_as_votable in order to up and down vote posts
+gem 'acts_as_votable', '~> 0.10.0'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

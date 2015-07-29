@@ -6,4 +6,12 @@
 <%= link_to 'Back', root_path %>
 <%= link_to 'Edit',  edit_post_path %>
 
+
+<%= link_to "upvote", like_post_path(@post), method: :put %>
+<%= link_to "downvote", dislike_post_path(@post), method: :put %>
+<%= link_to "unvote", unvote_post_path(@post), method: :put %>
+
+
+<%= @post.score %>
+
 <%= link_to 'Delete',  post_path, method: :delete, data: {confirm: "Are you sure?"} %>

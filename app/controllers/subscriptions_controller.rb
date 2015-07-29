@@ -10,6 +10,9 @@ class SubscriptionsController < ApplicationController
     
     def new
         @subscription = current_user.subscriptions.build
+        
+        @sub = Sub.find(params[:sub_id])
+        
     end
     
     
