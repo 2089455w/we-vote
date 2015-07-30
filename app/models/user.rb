@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
          
   has_many :posts
-  has_many :created_subs, :foreign_key => "creator_id", :class_name => "Sub"
+  has_many :subs
   
   has_many :subscriptions
 end
