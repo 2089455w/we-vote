@@ -6,4 +6,5 @@
 
 <% @posts.each do |post| %>
     <%= link_to post.title, post%></br>
+    <%= commontator_thread(post)%>
 <% end %>

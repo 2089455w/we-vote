@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
   
+  resources :comments
   resources :subs
   devise_for :users
  
   resources :subscriptions
   
-  root 'posts#index'
+
+  
+  
+  
+  root 'subs#index'
   
    resources :posts do
     member do

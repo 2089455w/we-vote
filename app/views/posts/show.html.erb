@@ -3,6 +3,14 @@
 <%= @post.title%>
 <p><%= @post.user.email %></p>
 
+
+
+<h1>Comments</h1>
+<% @post.comments.each do |p|%>
+    <%= p.content %>
+  <% end %>
+    
+
 <%= link_to 'Back', root_path %>
 <%= link_to 'Edit',  edit_post_path %>
 
