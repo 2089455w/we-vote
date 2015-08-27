@@ -6,9 +6,25 @@
 
 
 <h1>Comments</h1>
+</br>
 <% @post.comments.each do |p|%>
     <%= p.content %>
-  <% end %>
+    <% end %>
+    
+
+<%= render :partial => '/comments/form', :object => @comment%>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 
 <%= link_to 'Back', root_path %>
