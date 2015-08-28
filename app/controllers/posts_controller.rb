@@ -32,6 +32,7 @@ class PostsController < ApplicationController
     
     def show
         @comment = Comment.new
+        gon.comments = @post.comments.each
     end
     
     def edit

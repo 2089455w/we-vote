@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
   respond_to :html, :js
-
+  
 
 
 
@@ -32,9 +32,8 @@ class CommentsController < ApplicationController
   # POST /comments.json
   def create
     @comment = current_user.comments.build(comment_params)
-    
     if @comment.save
-      redirect_to @comment, notice: "Successfully create new comment"
+      redirect_to request.referrer, notice: "Successfully create new comment"
     else
       render 'new'
     end
@@ -72,6 +71,6 @@ class CommentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
-      params.require(:comment).permit(:post_id, :content)
+      params.require(:comment).permit(:post_id, :content, :parent_comment_id)
     end
 end

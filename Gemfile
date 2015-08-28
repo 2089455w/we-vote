@@ -35,10 +35,8 @@ gem 'devise', '~> 3.5.1'
 #Useing act_as_votable in order to up and down vote posts
 gem 'acts_as_votable', '~> 0.10.0'
 
-
-
-
-
+#using gon to access the databes cause rails is annoying sometimes.
+gem 'gon'
 
 
 # Use ActiveModel has_secure_password

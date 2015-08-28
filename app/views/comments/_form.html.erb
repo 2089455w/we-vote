@@ -2,7 +2,9 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.hidden_field :post_id, :value => @post.id %>
+    <%= f.hidden_field :post_id, :value => @post.id, :readonly => 'true' %>
+    <%= f.input_field :parent_comment_id %>
+
     <%= f.input :content %>
   </div>
 

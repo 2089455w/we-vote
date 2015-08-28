@@ -1,23 +1,30 @@
 <h1>Post</h1>
 
+
 <%= @post.title%>
 <p><%= @post.user.email %></p>
 
 
+<button id='comment'>Create comment</button>
 
 <h1>Comments</h1>
 </br>
-<% @post.comments.each do |p|%>
-    <%= p.content %>
+
+<% @post.comments.each do |c|%>
+    <% if c.parent_comment_id == nil%>
+        <div style='border: 1px solid black' id = "<%=c.id%>"><%=c.content %>
+        <button class='reply'>Reply</button></div>
+    <%end %>
     <% end %>
+
+    
     
 
-<%= render :partial => '/comments/form', :object => @comment%>
+<div style="display:none" id='text'><%= render :partial => '/comments/form', :object => @comment, :remote => true%></div>
     
     
     
-    
-    
+
     
     
     
