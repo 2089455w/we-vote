@@ -53,6 +53,44 @@ class CommentsController < ApplicationController
     end
   end
 
+
+  
+    def upvote
+        @comment = Comment.find(params[:id])
+        @comment.upvote_by current_user
+        redirect_to request.referrer 
+    end
+    
+    def downvote
+        @comment = Comment.find(params[:id])
+        @comment.downvote_by current_user
+        redirect_to request.referrer
+    end
+    
+    
+    def unvote
+        @comment = Comment.find(params[:id])
+        @comment.unvote_by current_user
+        redirect_to request.referrer
+    end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   # DELETE /comments/1
   # DELETE /comments/1.json
   def destroy

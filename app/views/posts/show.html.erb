@@ -7,6 +7,10 @@
 
 <button id='comment'>Create comment</button>
 
+
+<div style="display:none;" id='text'><%= render :partial => '/comments/form', :object => @comment%></div>
+    
+
 <h1>Comments</h1>
 </br>
 
@@ -17,13 +21,6 @@
     <%end %>
     <% end %>
 
-    
-    
-
-<div style="display:none" id='text'><%= render :partial => '/comments/form', :object => @comment, :remote => true%></div>
-    
-    
-    
 
     
     

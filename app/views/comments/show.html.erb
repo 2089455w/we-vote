@@ -28,5 +28,14 @@
 
 
 
+<%= link_to "upvote", like_comment_path(@comment), method: :put %>
+<%= link_to "downvote", dislike_comment_path(@comment), method: :put %>
+<%= link_to "unvote", unvote_comment_path(@comment), method: :put %>
+
+<%= @comment.score %>
+
+
+
+
 <%= link_to 'Edit', edit_comment_path(@comment) %> |
 <%= link_to 'Back', comments_path %>
