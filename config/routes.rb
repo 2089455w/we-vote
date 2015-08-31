@@ -7,7 +7,16 @@ Rails.application.routes.draw do
       put "unvote", to: "comments#unvote"
     end
   end
-  resources :subs
+  
+  resources :subs do
+    collection do 
+      get 'mySubscriptions'
+    end
+  end
+  
+  get 'subs/:id/subscribedusers' => "subs#subscribedusers"
+  
+  
   devise_for :users
  
   resources :subscriptions

@@ -21,7 +21,7 @@ class SubscriptionsController < ApplicationController
     
     
         if @subscription.save
-            redirect_to @subscription, notice: "Successfully create new subscription"
+            redirect_to request.referrer, notice: "Successfully create new subscription"
         
         else
             render 'new'

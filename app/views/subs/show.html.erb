@@ -10,7 +10,9 @@
 <h2><%= link_to 'Subscribe', new_subscription_path(:sub_id => 1) %></h2>
 
 
-<button type="button" id="test">Subscribe</button>
+
+
+<%= render :partial => '/subscriptions/form', :object => @subscription%>
 
 <div>
   <% @sub.posts.each do |p|%>

@@ -9,6 +9,11 @@ class User < ActiveRecord::Base
   
   has_many :posts
   has_many :subs
-  has_many :comments
+  
+  has_many :subs, :through => :subscriptions
   has_many :subscriptions
+  has_many :comments
+ 
+
+  
 end

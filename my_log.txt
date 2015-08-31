@@ -1,0 +1,22 @@
+28/08/2015 - First time writting into my log since the sit is now at a place where it is worth finishing, until then I wasnt sure if i would keep working on it or notic 
+             but now I have decide the complete it. As it stand I have just completed commenting, users can create a comment on a post, and they can reply to anyother comment, 
+             some of it is pretty hacky and maybe insecure? But it is just comments and the only thing a malicous user could do is change the post or parent coment on a reply, from in the
+             browser but that shouldnt matter. I might go back and secure it a bit better, I had an idea for some JS that wouldnt let the comment save if the ids werent right. 
+             Comments are also able to be voted on, I still need to add a button on the post show page in order to allow users to vote on them from there. There is no point in going onto the show page.
+             I have decided to keep an index of all the comments in one big ass page. It means that an admin should be able to go and see all the comments regardless of where they are, and delete them from there.
+        NOTE**Need to come up with a way to let admins delete stuff but not random users**
+             Now onto subscriptions I cant remeber where i got with them, ill need to go back in my github and check if i made a commit where i got them working. If they do work, that will be all the essentials up and running
+             now i need to work on some visual stuff, not themes or anything but i need to get a landing page up and running that will show a non loged in user the posts from top subs, tehn when a user signs in
+             it will have to change to a selection form there subs. 
+             Now I want to have favourite subs that will always be shown on a users front page, i will limit it to some abritary number as to stop them just faving everything. Then the rest of the posts will be made up with
+             post from a random selection of their other subs.
+
+
+
+            Okay so it is later on the same day and I posted a question to stack overflow earlier since the way is was doing subscriptions was inconvienent, The way i had it i was able to have a list of all the subscriptions
+            but it was almost impossible to get all the subs one person subscribes to without doing some whacky hacky code, that i imagine would be the most inefficent piece of crap in the whole app.
+            Now it should work the way i want, i havent fully tested it because i have had a bit to drink and I dont want to **** it up too bad but in the morning i should be able to create a page of all the subs that a user subsribes to..
+        NOTE**I should probably change the name of subs causee its annoying**
+        
+        
+29/08/2015 - So I have finally got the subscriptions working the way i want, I basically had it but i think there was something wrong with the order in which i put the has_many through in the models, but thanks to stackoverflow i got it working, now i am going to maake somke new modthod methods(or whatever they are called in ruby, i forget) in the user and subs controller, in the subs i am going to make a page that lists all the users that subscribe to a subs and one in the user that displays all the subs they subscribe to, but that will be work for anotheer day, because i am going to go make dinner soon, or maybe i will do it tonight 

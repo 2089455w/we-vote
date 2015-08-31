@@ -7,16 +7,32 @@ class SubsController < ApplicationController
     @subs = Sub.all
   end
 
+
+  def mySubscriptions
+    @subs = current_user.subs  
+  end
+
+
+
+
   # GET /subs/1
   # GET /subs/1.json
   def show
+    @subscription = Subscription.new
   end
+
+  def subscribedusers
+    @user = Sub.find(params[:id]).users
+  end
+  
+
 
   # GET /subs/new
   def new
     @sub = current_user.subs.build
   end
-
+  
+  
   # GET /subs/1/edit
   def edit
   end
